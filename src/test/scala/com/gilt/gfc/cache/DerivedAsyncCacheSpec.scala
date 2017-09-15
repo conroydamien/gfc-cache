@@ -169,7 +169,7 @@ class DerivedAsyncCacheSpec extends FunSpec with Matchers with MockitoSugar with
       f.sourceObjects.put(f.testKey2, f.testValue2)
       derivedAsyncCacheWATI.parent.get(f.testKey2)
 
-      Thread.sleep(2000)
+      Thread.sleep(2000) 
 
       derivedAsyncCacheWATI.get(f.testValue2).await shouldBe Some(f.testKey2)
     }
